@@ -35,6 +35,8 @@ body {
     right: 0;
     left: 0;
     transition: 1s;
+    flex-grow: 1; 
+    overflow-x: hidden;
 }
 
 #header.scrolling {
@@ -65,9 +67,9 @@ body {
 }
 
 
-
 .initial-section {
     background: linear-gradient(rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.808)), url("img/capa.jpg");
+    width: 100%;
     background-position: center;
     background-size: cover;
     padding: 50px;
@@ -97,6 +99,7 @@ body {
 
 .infographic {
     min-height: calc(100vh - 50px);
+    width: 100%;
     display: flex;
     background-color: var(--primaryGray);
 }
@@ -104,6 +107,7 @@ body {
 .container {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .container h1 {
@@ -158,7 +162,7 @@ body {
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: #dda73ab0;
+    background-color: #e9bd648c;
     border-radius: 50%;
     display: flex;
     flex-direction: row;
@@ -179,6 +183,39 @@ body {
     
 }
 
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5em;
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper h2 {
+    margin-left: 2em;
+}
+
+
+.carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+
+.carousel-item {
+    background-color: #DDA73A;
+    width: 300px;
+    height: 500px;
+    
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 1.1em;
+}
+
+
+
 
 /* Menu Mobile */
 .menu-mobile {
@@ -192,6 +229,7 @@ body {
     visibility: hidden;
     transition: 0.5s;
     overflow: hidden;
+    margin-right: 50%;
 }
 
 .menu-mobile nav a {
@@ -252,11 +290,14 @@ body {
 
 
 
+
 @media screen and (max-width: 768px) {
     .container {
         /* Mude a direção das divs para "column" (coluna) para exibi-las uma abaixo da outra */
         flex-direction: column;
     }
+
+    
 
     .right-side, .left-side {
         /* Redefina a largura para 100% para que as divs ocupem toda a largura da tela */
@@ -325,6 +366,7 @@ body {
     .menu-mobile.open {
         visibility: visible;
         height: calc(100vh - 55px);
+        margin-right: 50px;
     }
 
     #btn-menu {
@@ -332,15 +374,15 @@ body {
     }
 }
 
-@media (min-width: 1920px) {
+/*@media (min-width: 1920px) {
     .container {
-        /* Reduzir o espaçamento horizontal para 100px, por exemplo */
+        // Reduzir o espaçamento horizontal para 100px, por exemplo 
         margin-left: 100px;
         margin-right: 100px;
     }
 
     .right-side, .left-side {
-        /* Reduzir o espaçamento do lado direito e esquerdo para 50px, por exemplo */
+        // Reduzir o espaçamento do lado direito e esquerdo para 50px, por exemplo 
         padding: 3.5em 50px;
     }
 
@@ -348,4 +390,4 @@ body {
         margin-top: 50px;
         margin-left: 150px;
     }
-}
+} */
