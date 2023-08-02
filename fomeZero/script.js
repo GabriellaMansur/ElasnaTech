@@ -23,15 +23,18 @@ window.addEventListener("scroll", function() {
     header.classList.toggle('scrolling', window.scrollY > 0);
 })
 
-/* Menu mobile*/
 
-const menu = document.getElementById('menu-mobile');
+/* Menu mobile*/
+const menuDiv = document.querySelector('.menu-mobile');
 const btnAnimation = document.getElementById('btn-menu');
 
-menu.addEventListener('click', animationMenu);
-
+menuDiv.addEventListener('click', animationMenu);
+    
 function animationMenu() {
-    menu.classList.toggle('open');
+    menuDiv.classList.toggle('open');
     btnAnimation.classList.toggle('active');
+
 }
+
+
 
