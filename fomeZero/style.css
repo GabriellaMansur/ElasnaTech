@@ -35,7 +35,8 @@ body {
     left: 0;
     transition: 1s;
     flex-grow: 1; 
-    overflow-x: hidden;
+    z-index: 99;
+    
 }
 
 #header.scrolling {
@@ -184,39 +185,101 @@ body {
 
 .wrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     margin-top: 5em;
     width: 100%;
-    height: 100vh;
+    max-height: calc(100vh - 58px);
+    /*overflow-y: hidden;*/
+    
 }
 
 .wrapper h2 {
+    margin-top: 0;
+    margin-bottom: 0;
     margin-left: 2em;
 }
 
+.carousel-item {
+    position: relative;
+    overflow-y: hidden;
+}
+
 .carousel {
+
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    max-width: 100%;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 100%;
     justify-content: center;
-    margin-top: 2em;
+    margin-top: 2em;*/
+   
 }
 
-.carousel-item {
+.carousel-content {
     background-color: #DDA73A;
     max-width: 280px;
-    height: 530px;
-    margin: 1rem 0 0 1rem;
+    height: 350px;
+    margin: 1rem;
     border-radius: 5px;
-    padding: 20px;
     font-size: 1rem;
     box-shadow: 0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.247);   
+    position: relative;
+    overflow-y: hidden;
 }
 
-.carousel-item strong {
-    font-size: 1.2rem;
+.carousel-content::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 280px;
+    height: 100px;
+    background: linear-gradient(transparent, #f8f6f6);
 }
 
+.carousel-content p {
+    padding: 0px 20px 20px 20px;
+    margin: 0;
+}
+
+.carousel-content h2 {
+    padding-top: 20px;
+    margin-bottom: 1px;
+}
+
+.read-more {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Estilos adicionais para o botão "Leia mais" */
+    background-color: #56AD62;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #316934;
+} 
+
+.carousel-item.active-card .carousel-content {
+    height: 500px;
+}
+
+.carousel-item.active-card .carousel-content::before {
+    visibility: hidden;
+}
 
 /* Menu Mobile */
 .menu-mobile {

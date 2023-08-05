@@ -36,5 +36,33 @@ function animationMenu() {
 
 }
 
+/*const button = document.querySelectorAll('.read-more');
 
+button.addEventListener('click', function() {
+    console.log("BUtaooo")
+    const card = document.querySelectorAll('.carousel-item');
+    card.classList.toggle('active-card');
 
+    if (card.classList.contains('active-card')) {
+        return this.button.textContent = 'Leia menos';
+    }
+
+    button.textContent = 'Leia mais';
+});*/
+
+// Selecione todos os botões com a classe .read-more
+const buttons = document.querySelectorAll('.read-more');
+
+// Adicione um evento de clique a cada botão
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        const card = this.parentElement; // Encontre o elemento de conteúdo pai deste botão
+        card.classList.toggle('active-card');
+
+        if (card.classList.contains('active-card')) {
+            this.textContent = 'Leia menos';
+        } else {
+            this.textContent = 'Leia mais';
+        }
+    });
+});
