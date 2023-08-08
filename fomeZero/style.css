@@ -21,6 +21,9 @@ body {
     scroll-behavior: smooth;
 }
 
+
+
+
 #header{
     background-color: var(--primaryGreen);
     min-height: 50px;
@@ -70,13 +73,14 @@ body {
 .initial-section {
     background: linear-gradient(rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.808)), url("img/capa.jpg");
     width: 100%;
+    height: 100vh;
     background-position: center;
     background-size: cover;
     padding: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+   
 }
 
 .title {
@@ -126,9 +130,14 @@ body {
     box-shadow: inset -10px 10px 30px rgba(0, 0, 0, 0.103);
 }
 
+/*.right-side img {
+    margin-left: 5rem;
+}*/
+
 
 .right-side p {
     font-size: 1.3em;
+    text-align: justify;
 }
 
 .right-side h1 {
@@ -145,16 +154,19 @@ body {
     background-color: var(--primaryColor);
 }
 
+.left-side p {
+    text-align: justify;
+    margin-left: 1rem;
+}
+
 .card {
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-top: 2em;
     margin-bottom: 2em;
 }
 
-.card img {
-    margin-right: 20px;
-}
 
 #btn-top {
     position: fixed;
@@ -193,10 +205,11 @@ body {
     
 }
 
-.wrapper h2 {
+.wrapper h1 {
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 2em;
+    margin-left: 1em;
+    font-size: 2.5rem;
 }
 
 .carousel-item {
@@ -205,7 +218,6 @@ body {
 }
 
 .carousel {
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -225,7 +237,7 @@ body {
 .carousel-content {
     background-color: #DDA73A;
     max-width: 280px;
-    height: 350px;
+    height: 250px;
     margin: 1rem;
     border-radius: 5px;
     font-size: 1rem;
@@ -251,6 +263,7 @@ body {
 .carousel-content h2 {
     padding-top: 20px;
     margin-bottom: 1px;
+    margin-left: 15px;
 }
 
 .read-more {
@@ -280,6 +293,59 @@ body {
 .carousel-item.active-card .carousel-content::before {
     visibility: hidden;
 }
+
+
+.agriculture {
+    /*min-height: 100vh;
+    width: 100%;
+    margin-top: 3rem;
+    background-image: url('https://cdn.pixabay.com/photo/2015/10/17/18/28/pinwheel-993017_960_720.jpg');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;*/
+    background-color: var(--primaryGray);
+    color: #212322;
+    min-width: 300px;
+    max-width: 2000px;
+    margin: 3rem auto;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.164);
+    border-radius: 5px;
+    padding: 40px;
+
+    
+}
+
+.agriculture-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+ 
+}
+
+
+#agriculture-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.37);
+}
+
+.agriculture-content h2 {
+    margin: 2rem;
+}
+
+.agriculture-content p {
+    margin: 2rem auto;
+    text-align: justify;
+}
+
+
+
+
 
 /* Menu Mobile */
 .menu-mobile {
