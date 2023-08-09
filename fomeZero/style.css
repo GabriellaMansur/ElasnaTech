@@ -91,13 +91,13 @@ body {
 
 .title p {
     color: #F1F1F1;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 #text {
     color: var(--primaryColor);
     text-transform: uppercase;
-    font-size: 3.5em;
+    font-size: 3em;
     margin-bottom: 5px;
 }
 
@@ -125,14 +125,10 @@ body {
     align-items: center;
     justify-content: center;
     width: 50%;
-    padding: 2em;
+    padding: 3em 5em;
     background-color: var(--primaryColor) ;
     box-shadow: inset -10px 10px 30px rgba(0, 0, 0, 0.103);
 }
-
-/*.right-side img {
-    margin-left: 5rem;
-}*/
 
 
 .right-side p {
@@ -149,7 +145,7 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 1.3em;
-    padding: 2em;
+    padding: 5em;
     overflow: visible;
     background-color: var(--primaryColor);
 }
@@ -159,12 +155,18 @@ body {
     margin-left: 1rem;
 }
 
+
+
 .card {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2em;
     margin-bottom: 2em;
+}
+
+.card img {
+    margin-right: 1.5rem;
 }
 
 
@@ -224,14 +226,6 @@ body {
     align-items: center;
     margin-top: 3rem;
     max-width: 100%;
-    /*display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    justify-content: center;
-    margin-top: 2em;*/
-   
 }
 
 .carousel-content {
@@ -294,36 +288,19 @@ body {
     visibility: hidden;
 }
 
-
 .agriculture {
-    /*min-height: 100vh;
-    width: 100%;
-    margin-top: 3rem;
-    background-image: url('https://cdn.pixabay.com/photo/2015/10/17/18/28/pinwheel-993017_960_720.jpg');
-    background-size: 50%;
-    background-position: center;
-    background-repeat: no-repeat;*/
     background-color: var(--primaryGray);
-    color: #212322;
     min-width: 300px;
     max-width: 2000px;
     margin: 3rem auto;
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.164);
-    border-radius: 5px;
-    padding: 40px;
-
-    
+    padding: 30px;
 }
 
-.agriculture-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
- 
+.agriculture h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
 }
-
 
 #agriculture-img {
     width: 100%;
@@ -334,15 +311,85 @@ body {
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.37);
 }
 
-.agriculture-content h2 {
-    margin: 2rem;
+.agriculture-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.agriculture-content p {
+.agriculture-text {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 3em 1em;
+}
+
+.agriculture-text h3 {
+    font-size: 1.5em;
+}
+
+.agriculture-text p {
     margin: 2rem auto;
     text-align: justify;
+    font-size: 1.2em;
 }
 
+
+.agriculture-topics {
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-left: 8rem;
+}
+
+.agriculture-topics h3 {
+    font-size: 1.5em;
+    margin-top: 1rem;
+}
+
+.agriculture-topics ul {
+    margin: 2rem 1rem auto;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+.agriculture-topics li {
+    margin-bottom: 10px;
+}
+ 
+#video-aside {
+    height: 50vh;
+    width: 100%;
+    padding: 30px;
+}
+
+div.video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;}
+
+.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 80%;
+    height: 80%;
+    border-radius: 5px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.164);
+
+
+}
+
+#video-aside h3 {
+    font-size: 1.5em;
+margin-bottom: 20px;}
+
+#video-aside p {
+    font-size: 1.2em;
+}
 
 
 
@@ -414,6 +461,9 @@ body {
    display: none;
 }
 
+footer {
+    position: sticky;
+}
 
 /*Reponsividade*/
 
@@ -467,6 +517,17 @@ body {
 
     .card img {
         margin-right: 10px; /* Reduzindo o espaço entre a imagem e o texto das "cards" */
+    }
+
+    .agriculture-content {
+        flex-direction: column; /* Altera para coluna quando a tela é estreita */
+        align-items: center;
+    }
+
+    .agriculture-text,
+    .agriculture-topics {
+        width: 100%; /* Ocupar a largura total da tela */
+        margin-left: 0; /* Remover a margem esquerda */
     }
 }
 
