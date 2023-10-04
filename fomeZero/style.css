@@ -155,8 +155,6 @@ body {
     margin-left: 1rem;
 }
 
-
-
 .card {
     display: flex;
     justify-content: center;
@@ -170,39 +168,13 @@ body {
 }
 
 
-#btn-top {
-    position: fixed;
-    bottom: 50px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: #e9bd648c;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.arrow {
-    border: solid #F2F2F2;
-    border-width: 0 7px 7px 0;
-    padding: 5px;
-    display: inline-block;
-}
-
-.up {
-    transform: rotate(-135deg);
-    
-}
 
 .wrapper {
     display: flex;
     flex-direction: column;
     margin-top: 5em;
     width: 100%;
-    max-height: calc(100vh - 58px);
+    height: auto;
     /*overflow-y: hidden;*/
     
 }
@@ -216,7 +188,8 @@ body {
 
 .carousel-item {
     position: relative;
-    overflow-y: hidden;
+    max-height: 500px;
+    /*overflow-y: hidden;*/
 }
 
 .carousel {
@@ -236,7 +209,7 @@ body {
     border-radius: 5px;
     font-size: 1rem;
     box-shadow: 0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.247);   
-    position: relative;
+    /*position: relative;*/
     overflow-y: hidden;
 }
 
@@ -304,8 +277,7 @@ body {
 
 #agriculture-img {
     width: 100%;
-    height: auto;
-    max-height: 400px;
+    max-height: 300px;
     object-fit: cover;
     border-radius: 5px;
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.37);
@@ -319,7 +291,6 @@ body {
 }
 
 .agriculture-text {
-    display: block;
     align-items: center;
     justify-content: center;
     width: 50%;
@@ -359,39 +330,89 @@ body {
     margin-bottom: 10px;
 }
  
-#video-aside {
-    height: 50vh;
-    width: 100%;
-    padding: 30px;
-}
-
-div.video {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;}
-
-.video > iframe {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 80%;
-    height: 80%;
-    border-radius: 5px;
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.164);
-
-
+.video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #video-aside h3 {
     font-size: 1.5em;
-margin-bottom: 20px;}
-
-#video-aside p {
-    font-size: 1.2em;
 }
 
+#video-aside {
+   padding: 40px;
+}
 
+#video-aside p {
+    margin: 20px;
+    font-size: 1.1em;
+    
+}
+
+footer {
+    background:linear-gradient(180deg, #ecc473b6 0%, #da9917 100%) ;
+    height: 250px;
+}
+
+.myInformation {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3%;
+    margin-bottom: 32px;
+}
+
+.credits {
+    display: flex;
+    flex-direction: column;
+}
+
+.credits a {
+    text-decoration: none;
+    color: #1D262D
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #1D262D
+}
+
+.email {
+    text-align: center;
+}
+
+#btn-top {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #e9bd648c;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.arrow {
+    border: solid #F2F2F2;
+    border-width: 0 7px 7px 0;
+    padding: 5px;
+    display: inline-block;
+}
+
+.up {
+    transform: rotate(-135deg);
+    
+}
 
 
 /* Menu Mobile */
@@ -461,9 +482,6 @@ margin-bottom: 20px;}
    display: none;
 }
 
-footer {
-    position: sticky;
-}
 
 /*Reponsividade*/
 
@@ -529,6 +547,7 @@ footer {
         width: 100%; /* Ocupar a largura total da tela */
         margin-left: 0; /* Remover a margem esquerda */
     }
+
 }
 
 @media (min-width: 769px) {
